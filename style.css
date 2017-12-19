@@ -47,7 +47,35 @@ padding: 0 5px;
 margin: 0;
 }
 
+.mycourses-box {
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+  padding: 30px 0px;
+  border: 4px solid #4976a7;
+  font-size: 24px;
+}
+
+.mycourses-box .btn-mycourses a {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  background: #e57066;
+  padding: 16px 27px;
+  box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  margin-top: 20px;
+  display:inline-block;
+  
+}
+
 .button.cancel {display: none !important;}
+
+#main-course article.post-672 {
+  display: none !important;
+}
 
 .woocommerce form .form-row input.input-text {
     padding: 10px !important;
@@ -75,6 +103,28 @@ margin: 0;
 
 .woocommerce input.button.alt:hover {
   box-shadow: 0px 2px 12px rgba(0,0,0,0.4);
+}
+
+#woocommerce-cart-notice-yearly-subscription {
+  width: 75%;
+  margin: 0px auto !important;
+  text-align: center;
+  border: 4px solid #e57066;
+  font-weight: bold;
+}
+
+.woocommerce #woocommerce-cart-notice-yearly-subscription a.button {
+  clear: both;
+  margin-top: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: #e57066 !important;
+  padding: 16px 19px;
+  box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  display: block;
 }
 
 input#coupon_code {
@@ -148,6 +198,9 @@ input[type="submit"] {
   background: #e57066;
   box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
   border-radius: 2px;
+  border: none;
+  text-transform: uppercase;
+  color:#FFF;
 }
 
 #newsletter {
@@ -172,10 +225,9 @@ input[type="submit"] {
 input#mce-EMAIL {
     color:#FFF;
     border: 2px solid rgba(255,255,255,0.8);
-    border-right:0;
     background: transparent url(images/email.png) 10px 12px no-repeat;
     padding: 10px 10px 10px 40px;
-    width: 400px;
+    width: 90%;
     font-size: 1.3em;
     border-radius: 2px 0px 0px 2px;
     -moz-border-radius: 2px 0px 0px 2px;
@@ -351,55 +403,86 @@ nav ul li ul li {
 
 #banner {
   width: 100%;
+  padding: 100px 0px;
   background: url(images/banner.jpeg) center bottom #EDEDED;
   background-size: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-#banner-color {
-  background-color: rgba(0,0,0,0.6);
-  padding: 120px 0px;
+.banner-info {
+    padding: 0px 20px;
 }
 
-#banner .banner-info {
+#banner .banner-info h2 {
     color: #FFF;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
-    width: 100%;
-    margin: 0px auto 20px auto;
-    font-size: 4em;
-    line-height: 65px;
+    font-size:47px;
+    padding:0px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner > div {
+  margin: auto;
 }
 
 #banner a.btn {
     margin: 20px auto;
 }
 
-#banner span{
-  display: block;
+#banner p{
   color: #FFF;
-  font-size:21px;
+  font-size:17px;
   font-weight: 300;
   text-align: center;
+  padding: 0;
+  margin:0;
 }
 
 a.btn {
   color: #FFF;
-  width: 12%;
   text-transform: uppercase;
   font-size: 20px;
   text-decoration: none;
   text-align: center;
   background: #e57066;
-  padding: 16px 19px;
+  padding: 16px 27px;
   box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
   border-radius: 2px;
-  display: block;
   margin-top: 20px;
+  display: block;
+  width:32%;
 }
 
 a.btn:hover {
   box-shadow: 0px 2px 12px rgba(0,0,0,0.4);
+}
+
+#homesection {
+  padding:80px 0px;
+}
+
+#homesection h2 {
+  font-size: 40px;
+  margin-bottom:20px;
+}
+
+#homesection-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#homesection .sec {
+  text-align: center;
+  width:24%;
+}
+
+#homesection .sec p {
+    font-size: 20px;
 }
 
 #content {
@@ -445,21 +528,43 @@ footer {
 }
 
 #main-course {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
 #main-course article {
     background-color: rgba(0, 0, 0, 0.05);
     width: 35%;
+    margin: 20px 10px;
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-course article img{
+  float:none;
+  margin:0;
+}
+
+#my-courses article {
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 80%;
     padding: 20px;
     text-align: center;
 }
 
-#main-course article img{
-  width:30%;
-  height: auto;
-  padding:0px;
+#my-courses.ui-tabs {
+    position: relative;
+    zoom: 1;
+    width: 100%;
+}
+
+.post-540 {
+    display: none !important;
 }
 
 header.archive-header {
@@ -468,7 +573,7 @@ header.archive-header {
 
 #main-course header h2 a{
   text-transform: uppercase;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -560,23 +665,37 @@ ol.comment-list {
   a.btn {
     display: block;
     width: 88%;
-    padding: 1px;
+    padding: 10px 0px;
     margin: 10px auto;
   }
   input.mailchimp_btn {
     background:rgba(255,255,255,1);
-    margin-left:-110px;
+    margin-left:-30px;
   }
   #logo {
-    width: 50%;
-    padding:0px 15px;
+    width: 22%;
+    padding: 6px 15px;
+  }
+  #header h1 {
+    font-size: 1.2em;
   }
   #banner {
-    background-size: 200%;
+    background-size: 400%;
+    background-position: top right;
+    flex-direction: column;
+    padding:10px 0px;
   }
-  #banner .banner-info {
-    font-size: 2em;
-    padding:70px 0px;
+  #banner p {
+    font-size: 13px;
+  }
+  #banner .banner-info h2 {
+    font-size: 22px;
+  }
+  #banner .banner-info img {
+    width:80%;
+    height: auto;
+    margin:0px auto;
+    display: block;
   }
   .nav {
     justify-content: center;
@@ -591,9 +710,19 @@ ol.comment-list {
   #content {
     padding:0px 10px;
   }
+  #homesection-wrapper {
+    flex-direction: column;
+  }
+  #homesection .sec {
+    width: 90%;
+  }
   blockquote {
-    font-size: 1.4em;
+    font-size: 1em;
     width: 95%;
+    margin-bottom: 10px;
+  }
+  h1.landing-title {
+    font-size: 1.3em;
   }
   #about-photo {
     display: none;

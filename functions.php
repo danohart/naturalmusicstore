@@ -32,15 +32,15 @@
 
 function diw_post_thumbnail_feeds($content) {
 
-	global $post;
+  global $post;
 
-	if(has_post_thumbnail($post->ID)) {
+  if(has_post_thumbnail($post->ID)) {
 
-		$content = '<div>' . get_the_post_thumbnail($post->ID) . '</div>' . $content;
+    $content = '<div>' . get_the_post_thumbnail($post->ID) . '</div>' . $content;
 
-	}
+  }
 
-	return $content;
+  return $content;
 
 }
 
@@ -141,5 +141,114 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+
+/**
+ * Auto Complete all WooCommerce orders.
+ */
+add_action( 'woocommerce_thankyou', 'custom_woocommerce_auto_complete_order' );
+function custom_woocommerce_auto_complete_order( $order_id ) { 
+    if ( ! $order_id ) {
+        return;
+    }
+
+    $order = wc_get_order( $order_id );
+    $order->update_status( 'completed' );
+}
+
+remove_filter('the_content', 'wpautop');
+
+// Register Custom Post Type for Free Piano Lessons
+function free_lessons_piano() {
+
+  $labels = array(
+    'name'                  => _x( 'Free Piano Lessons', 'Free Piano Lessons', 'text_domain' ),
+    'singular_name'         => _x( 'Free Piano Lessons', 'Free Piano Lessons', 'text_domain' ),
+    'menu_name'             => __( 'Free Piano Lessons', 'text_domain' ),
+    'name_admin_bar'        => __( 'Free Piano Lessons', 'text_domain' ),
+    'archives'              => __( 'Item Archives', 'text_domain' ),
+    'attributes'            => __( 'Item Attributes', 'text_domain' ),
+    'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+    'all_items'             => __( 'All Items', 'text_domain' ),
+    'add_new_item'          => __( 'Add New Lesson', 'text_domain' ),
+    'add_new'               => __( 'Add New', 'text_domain' ),
+    'new_item'              => __( 'New Lesson', 'text_domain' ),
+    'edit_item'             => __( 'Edit Lesson', 'text_domain' ),
+    'update_item'           => __( 'Update Item', 'text_domain' ),
+    'view_item'             => __( 'View Lesson', 'text_domain' ),
+    'view_items'            => __( 'View Lessons', 'text_domain' ),
+    'search_items'          => __( 'Search Lessons', 'text_domain' ),
+    'not_found'             => __( 'Not found', 'text_domain' ),
+    'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+    'featured_image'        => __( 'Featured Image', 'text_domain' ),
+    'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+    'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+    'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+    'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+    'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+    'items_list'            => __( 'Items list', 'text_domain' ),
+    'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+    'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+  );
+  $args = array(
+    'label'                 => __( 'Free Piano Lessons', 'text_domain' ),
+    'description'           => __( 'A category of free piano lessons', 'text_domain' ),
+    'labels'                => $labels,
+    'supports'              => array( 'title', 'editor', 'thumbnail', ),
+    'taxonomies'            => array( 'category', 'post_tag' ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,    
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'page',
+  );
+  register_post_type( 'piano_post_type', $args );
+
+}
+add_action( 'init', 'free_lessons_piano', 0 );
+
+
+function add_student_to_course($order_id) {
+  // Lets grab the order and the user id
+  $order = wc_get_order( $order_id );
+  $user_id = $order->user_id;
+  
+  // This is how to grab line items from the order 
+  $line_items = $order->get_items();
+
+  // This loops over line items
+  foreach ( $line_items as $item ) {
+    // This will be a product
+    $product = $order->get_product_from_item( $item );
+  
+    // This is the product's id
+    $pid = $product->id;
+    
+    // 1376 is the product id from woocommerce. 44 is the course id from sensei
+    // If the product id is the one I'm looking for, then put it in the sensei course.
+    if($pid == 1376) {
+      WooThemes_Sensei_Utils::user_start_course($user_id, 44);
+      WooThemes_Sensei_Utils::user_start_course($user_id, 342);
+      WooThemes_Sensei_Utils::user_start_course($user_id, 29);
+    }
+  }
+}
+
+add_action( 'woocommerce_order_status_completed', 'add_student_to_course' );
+
+function go_to_mycourses() { ?>
+  <div class="mycourses-box">
+    Thank you for your purchase. Go to your courses page to get started
+    <div class="btn-mycourses"><a href="<?php bloginfo('url');?>/my-courses/">My Courses</a></div>
+  </div>
+<?php }
+
+add_action( 'woocommerce_thankyou', 'go_to_mycourses', 1);
 
 ?>
