@@ -119,7 +119,7 @@ function wpa83367_price_html( $price, $product ){
     return '';
 }
 
-add_filter('add_to_cart_redirect', 'lessons_add_to_cart_redirect');
+add_filter('woocommerce_add_to_cart_redirect', 'lessons_add_to_cart_redirect');
 function lessons_add_to_cart_redirect() {
  global $woocommerce;
  $checkout_url = $woocommerce->cart->get_checkout_url();

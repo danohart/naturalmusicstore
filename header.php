@@ -18,7 +18,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="<?php wp_title(); ?>" />
 <meta property="fb:admins" content="595996194" />
-<meta property="og:image" content="<?php bloginfo(template_url); ?>/images/homevideo.png" />
+<meta property="og:image" content="<?php bloginfo('template_url'); ?>/images/homevideo.png" />
 <meta property="og:url" content="<?php the_permalink(); ?>" />
 
 <script>
@@ -89,14 +89,14 @@
           <div class="banner-info">
             <h2>START LEARNING<br/>GOSPEL PIANO TODAY!</h2>
             <p>Take your piano playing to the next level by receiving <br/>Natural Music’s piano video lessons right on your computer, tablet, or phone.</p>
-            <a class="btn" href="<?php bloginfo(url);?>/courses-overview/">Get Started</a>
+            <a class="btn" href="<?php bloginfo('url');?>/courses-overview/">Get Started</a>
           </div>
           <div class="banner-info">
             <script type="text/javascript">
     var embedCode = '<iframe width="590" height="332" src="https://www.youtube.com/embed/pydQC0K2ZPw?rel=0&autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>'
             </script>
             <div id="videocontainer" class="videoWrapper">
-              <img src="<?php bloginfo(template_url);?>/images/homevideo.png" onclick="document.getElementById('videocontainer').innerHTML = embedCode;"/>
+              <img src="<?php bloginfo('template_url');?>/images/homevideo.png" onclick="document.getElementById('videocontainer').innerHTML = embedCode;"/>
             </div>
             <a class="btn" onclick="document.getElementById('videocontainer').innerHTML = embedCode;">Watch Video</a>
           </div>
