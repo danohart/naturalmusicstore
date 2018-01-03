@@ -1,0 +1,36 @@
+$primary-color: #3c6898;
+$primary-color-alt: #4b76a5;
+
+$secondary-color: #404040;
+
+$secondary-color-bold: #e57066;
+
+$primary-text: #5F5F5F;
+
+$primary-font: 'Raleway', sans-serif;
+
+$background-color: #FCFCFC;
+
+@mixin button {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: $secondary-color-bold;
+  padding: 15px 30px;
+  border: none;
+  box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  margin: 20px 0px;
+  display: inline-block;
+
+  &:hover {
+    background-color: darken($secondary-color-bold, 4%);
+    box-shadow: 0px 2px 12px rgba(0,0,0,0.4);
+  }
+
+  &:active {
+    background-color: darken($secondary-color-bold, 10%);
+  }
+}

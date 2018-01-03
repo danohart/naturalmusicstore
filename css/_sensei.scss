@@ -4,6 +4,11 @@
   align-items: center;
   flex-direction: row;
 
+  // Hide the duplicate 3 Program course from main subscribers
+  article.post-672 {
+    display: none !important;
+  }
+
   article {
     background-color: rgba(0, 0, 0, 0.05);
     width: 35%;
@@ -39,6 +44,10 @@
 
 .post-540 {
     display: none !important;
+}
+
+p.lesson-meta {
+  display:none !important;
 }
 
 header.archive-header {
@@ -105,4 +114,30 @@ section.course-meta {
 
 span.course-lesson-count {
     font-size: 25px;
+}
+
+.mycourses-box {
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+  padding: 30px 0px;
+  border: 4px solid #4976a7;
+  font-size: 24px;
+}
+
+.mycourses-box {
+  .btn-mycourses a {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    background: #e57066;
+    padding: 16px 27px;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
+    border-radius: 2px;
+    margin-top: 20px;
+    display:inline-block;
+    
+  }
 }
