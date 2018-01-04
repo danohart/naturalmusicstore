@@ -11,6 +11,10 @@ $primary-font: 'Raleway', sans-serif;
 
 $background-color: #FCFCFC;
 
+@mixin rounded-corners {
+  border-radius: 2px;
+}
+
 @mixin button {
   color: #FFF;
   text-transform: uppercase;
@@ -21,7 +25,7 @@ $background-color: #FCFCFC;
   padding: 15px 30px;
   border: none;
   box-shadow: 0px 5px 12px rgba(0,0,0,0.4);
-  border-radius: 2px;
+  @include rounded-corners;
   margin: 20px 0px;
   display: inline-block;
 

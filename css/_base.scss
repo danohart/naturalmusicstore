@@ -372,6 +372,49 @@ h1.landing-title {
   margin: 30px auto 10px auto;
 }
 
+.free-lesson-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pagination-nav {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+      margin:0px 5px;
+
+      a {
+        border:1px solid $primary-color;
+        background-color: #FFFFFF;
+        color: $primary-color;
+        text-decoration: none;
+        padding: 7px 15px 8px 15px;
+        @include rounded-corners;
+
+        &:hover {
+          background-color: $primary-color-alt;
+          color: #FFFFFF;
+        }
+      }
+
+      &.previous > a, &.next > a {
+        background-color: $primary-color-alt;
+        color: #FFFFFF;
+      }
+
+      &.active > a {
+        background-color: $primary-color;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
 footer.footer {
   background: #EDEDED;
   padding:35px 5px 5px 5px;
@@ -391,4 +434,4 @@ ol.comment-list {
     margin: 20px;
     padding: 20px;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.12);
-}
+} 

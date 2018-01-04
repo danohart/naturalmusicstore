@@ -384,6 +384,48 @@ h1.home-title {
 h1.landing-title {
   margin: 30px auto 10px auto; }
 
+.free-lesson-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.pagination-nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .pagination-nav ul li {
+    margin: 0px 5px; }
+    .pagination-nav ul li a {
+      border: 1px solid #3c6898;
+      background-color: #FFFFFF;
+      color: #3c6898;
+      text-decoration: none;
+      padding: 7px 15px 8px 15px;
+      border-radius: 2px; }
+      .pagination-nav ul li a:hover {
+        background-color: #4b76a5;
+        color: #FFFFFF; }
+    .pagination-nav ul li.previous > a, .pagination-nav ul li.next > a {
+      background-color: #4b76a5;
+      color: #FFFFFF; }
+    .pagination-nav ul li.active > a {
+      background-color: #3c6898;
+      color: #FFFFFF; }
+
 footer.footer {
   background: #EDEDED;
   padding: 35px 5px 5px 5px;
@@ -472,7 +514,7 @@ input#coupon_code {
   padding: 11px;
   width: 200px !important; }
 
-.button.cancel {
+.button.cancel, td.remove_item {
   display: none !important; }
 
 #main-course {

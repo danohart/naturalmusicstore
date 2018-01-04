@@ -34,6 +34,6 @@ input#coupon_code {
 
 // Removes Cancel Button for WooCommerce Subscriptions
 
-.button.cancel {
+.button.cancel, td.remove_item {
   display: none !important;
 }
