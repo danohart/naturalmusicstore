@@ -141,3 +141,37 @@ span.course-lesson-count {
     
   }
 }
+
+#sensei-user-courses {
+  .course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+
+    li.course {
+      width: 20%;
+
+      .course-content {
+
+        .course-title a {
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          font-weight: bold;
+          margin-bottom: 0px;
+        }
+
+        .sensei-course-meta {
+          display: none;
+        }
+
+        .entry img.alignleft {
+          width: 100%;
+          height: auto;
+          float: none;
+        }
+      }
+    }
+  }
+}

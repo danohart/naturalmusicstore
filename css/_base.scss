@@ -247,7 +247,7 @@ input.mailchimp_btn {
 }
 
 .nav {
-  background: #EDEDED;
+  background: $secondary-color-alt;
   background-size: 100%;
   width:100%;
   list-style: none;
@@ -279,10 +279,14 @@ input.mailchimp_btn {
   }
 }
 
+.navigation-toggle, .navigation-checkbox {
+  display: none;
+}
+
 #banner {
   width: 100%;
   padding: 100px 0px;
-  background: url(images/banner.jpeg) center bottom #EDEDED;
+  background: url(images/banner.jpeg) center bottom $secondary-color-alt;
   background-size: 100%;
   display: flex;
   flex-direction: row;
@@ -416,7 +420,7 @@ h1.landing-title {
 }
 
 footer.footer {
-  background: #EDEDED;
+  background: $secondary-color-alt;
   padding:35px 5px 5px 5px;
   min-height: 100px;
   text-align: center;

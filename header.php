@@ -73,12 +73,19 @@
       <h1><?php bloginfo('name'); ?></h1>
     </a>
   </div>
-<br clear="both"/>
-  
+  <br clear="both"/>
 </div>
+    <!-- Start of navigation toggle -->
+      <input id="navigation-checkbox" class="navigation-checkbox" type="checkbox">
+      <label class="navigation-toggle" for="navigation-checkbox">
+        <span class="navigation-toggle-icon"></span>
+        <span class="navigation-toggle-label">Menu</span>
+      </label>
+    <!-- End of navigation toggle -->
+
   <ul class="nav">
-      <?php wp_nav_menu( array('menu' => 'Main Nav', 'theme_location' => 'main-menu', 'items_wrap' => '%3$s', 'container' => 'false'  )); ?>
-    </ul>
+    <?php wp_nav_menu( array('menu' => 'Main Nav', 'theme_location' => 'main-menu', 'items_wrap' => '%3$s', 'container' => 'false'  )); ?>
+  </ul>
 
 
     <?php if (is_front_page()) {?>

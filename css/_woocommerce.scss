@@ -32,6 +32,31 @@ input#coupon_code {
     width: 200px !important;
 }
 
+// My Account Stylings
+
+nav.woocommerce-MyAccount-navigation {
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    li {
+      a {
+        display: block;
+        padding: 7px;
+        margin-bottom: 5px;
+        background-color: $secondary-color-alt;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $secondary-color;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
 // Removes Cancel Button for WooCommerce Subscriptions
 
 .button.cancel, td.remove_item {
