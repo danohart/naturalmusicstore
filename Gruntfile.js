@@ -32,14 +32,30 @@ module.exports = function (grunt) {
       }
     },
     cssmin: { // Begin CSS Minify Plugin
+      options: {
+        mergeIntoShorthands: false,
+        roundingPrecision: -1
+      },
       target: {
         files: [{
           expand: true,
-          cwd: 'css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'css',
-          ext: '.min.css'
-    }]
+          cwd: '',
+          src: ['style.css'],
+          dest: '',
+          ext: '.css'
+        }]
+      }
+    },
+    usebanner: {
+      taskName: {
+        options: {
+          position: 'top',
+          banner: '/* Theme Name: Natural Music Theme URI: http://naturalmusicstore.com Author: Daniel Hart Author URI: http://danielhart.co/ Description: A Wordpress theme by DanielHart.co :D Version: 1.0 */',
+          linebreak: true
+        },
+        files: {
+          src: [ 'style.css' ]
+        }
       }
     },
     uglify: { // Begin JS Uglify Plugin
@@ -51,7 +67,7 @@ module.exports = function (grunt) {
     watch: { // Compile everything into one task with Watch Plugin
       css: {
         files: '**/*.scss',
-        tasks: ['sass', 'postcss', 'cssmin']
+        tasks: ['sass', 'postcss', 'cssmin', 'usebanner']
       },
       js: {
         files: '**/*.js',
@@ -64,10 +80,13 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Register Grunt tasks
   grunt.registerTask('default', 'sass');
   grunt.registerTask('default', 'postcss');
+  grunt.registerTask('default', 'cssmin');
+  grunt.registerTask('default', 'usebanner');
 };
