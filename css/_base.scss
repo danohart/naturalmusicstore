@@ -186,7 +186,7 @@ input.mailchimp_btn {
   background: $primary-color-alt;
   text-align: center;
   color:#FFF;
-  padding:8px 20px;
+  padding:12px 20px;
   font-weight: 100;
   text-transform: uppercase;
   font-size: 13px;
@@ -207,6 +207,18 @@ input.mailchimp_btn {
     &:hover {
       font-weight: 100;
       text-decoration: underline;
+    }
+
+    &.primary-link {
+      border:1px solid #FFFFFF;
+      @include rounded-corners;
+      padding: 5px 10px;
+      margin-right: 10px;
+
+      &:hover {
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.25);
+      }
     }
   }
 }

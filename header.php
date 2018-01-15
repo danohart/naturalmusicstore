@@ -55,9 +55,9 @@
 
   <div>
     <?php if ( is_user_logged_in() ) : ?>
-      <a href="<?php bloginfo('url');?>/my-courses/">My Courses</a> | <a href="<?php echo wp_logout_url( get_permalink() ); ?>'" title="<?php _e( 'Logout' ); ?>" class="hunderline"><?php _e( 'Logout' ); ?></a>
+      <a href="<?php bloginfo('url');?>/my-courses/" class="primary-link">My Courses</a><a href="<?php echo wp_logout_url( get_permalink() ); ?>'" title="<?php _e( 'Logout' ); ?>"><?php _e( 'Logout' ); ?></a>
     <?php else: ?>
-      <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e( 'Login' ); ?>" class="hunderline"><?php _e( 'Login' ); ?></a>
+      <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e( 'Login' ); ?>" class="primary-link"><?php _e( 'Login' ); ?></a>
     <?php endif; ?>
   </div>
 </div>
