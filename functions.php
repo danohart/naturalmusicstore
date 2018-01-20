@@ -10,52 +10,27 @@
     'after_title' => '</h2>',
    ));
 
- if ( function_exists('register_sidebar') )
-   register_sidebar(array(
-    'name' => 'Top Bar',
-    'id' => 'top-bar',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '',
-    'after_title' => '',
-   ));
-
- if ( function_exists('register_sidebar') )
-   register_sidebar(array(
-    'name' => 'Footer',
-    'id' => 'footer',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h2>',
-    'after_title' => '</h2>',
-   ));
-
 function diw_post_thumbnail_feeds($content) {
-
   global $post;
-
   if(has_post_thumbnail($post->ID)) {
-
     $content = '<div>' . get_the_post_thumbnail($post->ID) . '</div>' . $content;
-
   }
-
   return $content;
-
 }
 
 add_filter('the_excerpt_rss', 'diw_post_thumbnail_feeds');
-
 add_filter('the_content_feed', 'diw_post_thumbnail_feeds');
 
 add_theme_support( 'menus' );
 
 function register_my_menus() {
-register_nav_menus(
-array(
-'main-menu' => __( 'Main Menu' )
-)
-);
+  register_nav_menus(
+    array(
+    'main-menu' => __( 'Main Menu' ),
+    'footer-left' => __( 'Footer Menu Left' ),
+    'footer-right' => __( 'Footer Menu Right' )
+    )
+  );
 }
 
 add_action( 'init', 'register_my_menus' );

@@ -431,11 +431,83 @@ h1.landing-title {
   }
 }
 
-footer.footer {
+footer.main-footer {
   background: $secondary-color-alt;
-  padding:35px 5px 5px 5px;
+  padding:80px 5px 20px 5px;
   min-height: 100px;
-  text-align: center;
+
+  .footer-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    h2 {
+      font-size: 1.9em;
+    }
+
+    p {
+      padding: 0px 0px 6px 0px;
+      margin: 0px;
+    }
+
+    .mc-field-group {
+      width: 100%;
+
+      input#mce-EMAIL {
+        width: 58%;
+        background-color: #FFFFFF;
+        color: $primary-text;
+      }
+
+      input.mailchimp_btn {
+        padding: 11px 30px 16px 30px;
+      }
+    }
+
+    .footer-menu {
+      width: 17%;
+      margin-right: 30px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: block;
+        padding: 5px 0px;
+        border-bottom: 2px solid $secondary-color-alt;
+
+        &:hover {
+          border-bottom: 2px solid $primary-text;
+        }
+
+        a {
+          display: block;
+          padding: 5px 0px;
+          text-decoration: none;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 60px 0px 20px 0px;
+
+    .logo {
+      width: 20%;
+      margin: 0px auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 ol.comment-list {

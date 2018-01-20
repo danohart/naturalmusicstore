@@ -59,6 +59,6 @@ nav.woocommerce-MyAccount-navigation {
 
 // Removes Cancel Button for WooCommerce Subscriptions
 
-.button.cancel, td.remove_item {
+.button.cancel, td.remove_item, td.payment-method-actions .delete {
   display: none !important;
 }

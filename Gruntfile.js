@@ -88,5 +88,4 @@ module.exports = function (grunt) {
   grunt.registerTask('default', 'sass');
   grunt.registerTask('default', 'postcss');
   grunt.registerTask('default', 'cssmin');
-  grunt.registerTask('default', 'usebanner');
 };

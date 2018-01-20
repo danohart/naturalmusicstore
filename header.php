@@ -129,10 +129,10 @@
         <h2 align="center">Want to receive free tutorials?</h2>
         <p align="center">Get a free tutorial delivered right to your inbox <span>each month!</span><br/>Sign up now!</p>
         <div class="mc-field-group">
-<form id="mc-embedded-subscribe-form" class="validate" action="//naturalmusicstore.us12.list-manage.com/subscribe/post?u=3555d06362fd1009fbd0784ad&amp;id=ff59552330" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+          <form id="mc-embedded-subscribe-form" class="validate" action="//naturalmusicstore.us12.list-manage.com/subscribe/post?u=3555d06362fd1009fbd0784ad&amp;id=ff59552330" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
           <input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL">
           <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="mailchimp_btn">
-   </form>
+          </form>
         </div>
       </div>
 
