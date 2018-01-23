@@ -58,20 +58,10 @@ module.exports = function (grunt) {
         }
       }
     },
-    uglify: { // Begin JS Uglify Plugin
-      build: {
-        src: ['*.js'],
-        dest: 'js/min/script.min.js'
-      }
-    },
     watch: { // Compile everything into one task with Watch Plugin
       css: {
         files: '**/*.scss',
         tasks: ['sass', 'postcss', 'cssmin', 'usebanner']
-      },
-      js: {
-        files: '**/*.js',
-        tasks: ['uglify']
       }
     }
   });

@@ -1,1 +1,0 @@
-var $allVideos=$("iframe[src^='//www.youtube.com']"),$fluidEl=$("body");$allVideos.each(function(){$(this).data("aspectRatio",this.height/this.width).removeAttr("height").removeAttr("width")}),$(window).resize(function(){var i=$fluidEl.width();$allVideos.each(function(){var t=$(this);t.width(i).height(i*t.data("aspectRatio"))})}).resize();
