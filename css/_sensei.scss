@@ -54,6 +54,18 @@
   }
 }
 
+nav#post-entries {
+  margin: 10px;
+
+  .nav-prev, .nav-next {
+    @include button;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
 #my-courses {
 
   &.ui-tabs {
@@ -115,6 +127,10 @@ section.course-meta {
 }
 
 .course-lessons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 
   article header {
     margin-left:60px;
@@ -123,7 +139,8 @@ section.course-meta {
   article.lesson {
     background: rgba(226, 226, 226, 0.33);
     padding: 20px;
-    margin-bottom: 10px;
+    width: 27%;
+    margin: 10px;
     border-bottom: 2px solid #e2e2e2;
 
       &:before {
@@ -135,6 +152,7 @@ section.course-meta {
 
     h2 {
       margin:0px;
+      font-size: 12px;
 
       a {
         text-decoration: none;
@@ -205,6 +223,27 @@ span.course-lesson-count {
           float: none;
         }
       }
+    }
+  }
+}
+
+@media handheld, only screen and (max-width: 730px) {
+  .course-lessons {
+    article.lesson {
+      width: 30%;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    article header {
+      margin-left: 0px;
+    }
+  }
+  nav#post-entries {
+    .nav-prev, .nav-next {
+      float: none;
     }
   }
 }

@@ -70,7 +70,7 @@
 
   <div id="title">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-      <h1><?php bloginfo('name'); ?></h1>
+      <h1>Natural Music</h1>
     </a>
   </div>
   <br clear="both"/>
@@ -134,6 +134,16 @@
           <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="mailchimp_btn">
           </form>
         </div>
+      </div>
+
+      <div class="testimonial-wrap">
+        <h2 align="center">What Others Are Saying About These Lessons</h2>
+    
+        <div class="testimonial">I'm happy to find your online courses, they are impressive and easy structured God bless you. <span>- Kiyenze J.</span></div>
+
+        <div class="testimonial">You were a great help in getting me started playing the piano once again. I now play for my church every Sunday. <span>- Aline B. </span></div>
+
+        <div class="testimonial">I wanted to thank you for putting this course together. It's amazing. I hope that you continue to teach others to play. I'm having so much fun learning this way after giving up on traditional lessons 30 years ago. <span>- Trey A.</div>
       </div>
 
     <?php } else { ?>
