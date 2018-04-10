@@ -46,21 +46,35 @@ $mfp-use-visuallyhidden:              false !default;                      // Hi
 .popup {
 	position: relative;
 	background: #FFF;
-  	padding: 20px;
-  	width: auto;
-  	max-width: 500px;
-  	margin: 20px auto;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
 
-  	h3 {
+	h3 {
   		font-size: 1.4em;
-  	}
+  }
 
-  	.mc-field-group {
-  		width: 100%;
+  .mc-field-group {
+  	width: 100%;
 
-  		input#mce-EMAIL {
-  			border-bottom: 2px solid $primary-color;
-  			color: #000000;
-  		}
+  	input#mce-EMAIL {
+  		border-bottom: 2px solid $primary-color;
+  		color: #000000;
   	}
+  }
 }
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+
+  &.mfp-ready {
+    opacity: 0.8;
+  }
+
+  &.mfp-removing {
+    opacity: 0;
+  }
+}
+
