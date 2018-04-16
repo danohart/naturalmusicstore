@@ -32,6 +32,7 @@ $background-color: #FCFCFC;
   display: inline-block;
   overflow: hidden;
   z-index: 1;
+  -webkit-appearance: none;
 
   &:before {
     content: '';

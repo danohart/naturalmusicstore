@@ -75,6 +75,7 @@
 
   #homesection .sec {
     width: 90%;
+    margin: 0px auto;
   }
 
   blockquote {
@@ -100,12 +101,16 @@
     }
   }
 
+  #newsletter {
+    padding: 50px 18px;
+  }
+
   .mc-field-group {
     width: 90%;
   }
 
   input#mce-EMAIL {
-    width:42%;
+    width:80%;
   }
 
   .info-box ul li {
@@ -115,6 +120,10 @@
       width: 100%;
       margin:0px;
       margin-bottom: 10px;
+  }
+
+  .testimonial-wrap {
+    padding: 20px 0;
   }
 
   .videoWrapper {

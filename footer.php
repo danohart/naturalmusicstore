@@ -25,6 +25,23 @@
     	&copy;&nbsp;<?php echo date("Y"); ?>&nbsp;<?php bloginfo('name'); ?>
     </div>
 </footer>
+<!-- <?php if ( is_page(1366) ) { ?>
+<div id="clock">
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+<?php } ?>
+-->
 
 <?php wp_footer();?>
 

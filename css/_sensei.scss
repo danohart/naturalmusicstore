@@ -246,4 +246,38 @@ span.course-lesson-count {
       float: none;
     }
   }
+
+  #sensei-user-courses {
+
+    .my-messages-link {
+      display: none; 
+    }
+    
+    .course-container {
+      margin: 0px;
+      padding: 20px;
+
+      li.course {
+        width: 100%;
+        padding: 0px;
+
+        .course-content {
+        
+          .meter {
+            margin: 2px;
+          }
+
+          p.course-excerpt {
+            display: none;
+          }
+
+          .entry {
+            img.alignleft {
+              padding: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
