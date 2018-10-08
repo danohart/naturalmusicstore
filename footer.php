@@ -46,6 +46,7 @@
 <?php wp_footer();?>
 
 
+<!-- Exit pop up
 <?php if ( is_user_logged_in() ) { 
     // Do Nothing
 } else {
@@ -72,7 +73,9 @@
 	<script type='text/javascript' src="<?php bloginfo('template_url');?>/js/magnific.js"></script>
 	<?php }
 } // End if user is logged in
-?>
+?> 
+End exit pop up -->
+
 <script type='text/javascript' src="<?php bloginfo('template_url');?>/js/script.js"></script>
 
 <script>

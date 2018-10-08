@@ -55,6 +55,23 @@ function natural_login_logo() { ?>
           width: 100%;
           background-size: 37%;
         }
+
+        .login form {
+          border-radius: 10px;
+        }
+
+        .wp-core-ui .button-primary {
+          background-color: #3c6898 !important;
+          box-shadow: none !important;
+          text-transform: uppercase;
+          text-shadow: none !important;
+          border-color: #3c6898 !important;
+        }
+
+        .wp-core-ui .button-primary:hover {
+          background-color: #FFF !important;
+          color: #000 !important;
+        }
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'natural_login_logo' );
@@ -303,5 +320,13 @@ function pagination_nav() {
     echo '</ul></div>' . "\n";
  
 }
+
+function termsofservice_info() { ?>
+  <div class="auto-renew-message">
+    By clicking 'Sign Up Now' you're agreeing to starting a monthly subscription with us. Monthly subscriptions renew every month and withdraw the amount displayed on this page. You can cancel your subscription by emailing us at <a href="mailto:cancel@naturalmusicstore.com">cancel@naturalmusicstore.com</a>
+  </div>
+<?php }
+
+add_action ( 'woocommerce_review_order_after_submit' , 'termsofservice_info' );
 
 ?>
