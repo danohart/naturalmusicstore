@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Landing
+Template Name: Landing Thank You Page
 */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
@@ -41,7 +41,7 @@ Template Name: Landing
   'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '727938030719382'); 
     fbq('track', 'PageView');
-    fbq('track', 'ViewContent');
+    fbq('track', 'Lead');
 </script>
 <noscript>
  <img height="1" width="1" 

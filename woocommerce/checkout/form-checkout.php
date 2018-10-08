@@ -29,6 +29,7 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
   jQuery(function($) {
     $( ".datepicker input" ).datepicker();
   });
+  fbq('track', 'InitiateCheckout');
   </script>
 
 <h1 align="center"><?php the_title();?></h1>
