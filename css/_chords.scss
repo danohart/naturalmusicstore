@@ -1,0 +1,40 @@
+.transpose-select {
+	position: relative;
+
+	select {
+	  -webkit-appearance: none;
+	  padding: 5px;
+	  @include rounded-corners;
+	}
+}
+
+#crdtra-direction, #crdtra-steps {
+	width: 180px;
+}
+
+.list-music-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: flex-wrap;
+
+	.sheet-music {
+
+		a {	
+			display: block;
+			text-transform: upppercase;
+			text-decoration: none;
+			background: rgba(226,226,226,.33);
+			padding: 10px 20px;
+			margin: 10px;
+			border-bottom: 2px solid #e2e2e2;
+			@include rounded-corners;
+
+			&:hover {
+				background: $primary-color-alt;
+				color: #FFFFFF;
+			}
+		}
+	}
+}

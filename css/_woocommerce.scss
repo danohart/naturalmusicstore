@@ -57,8 +57,28 @@ nav.woocommerce-MyAccount-navigation {
   }
 }
 
+// Checkout Stylings
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  float: none;
+}
+
+.auto-renew-message {
+  font-size: 14px;
+}
+
 // Removes Cancel Button for WooCommerce Subscriptions
 
 .button.cancel, td.remove_item, td.payment-method-actions .delete {
   display: none !important;
+}
+
+.woocommerce-checkout #payment div.payment_box {
+  div.form-row-first {
+    padding: 1em 0em 1em 0em;
+  }
+
+  div.form-row-last {
+    padding: 1em 0em 1em 0em;
+  }
 }
