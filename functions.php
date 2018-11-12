@@ -173,6 +173,12 @@ function add_student_to_course($order_id) {
       WooThemes_Sensei_Utils::user_start_course($user_id, 342);
       WooThemes_Sensei_Utils::user_start_course($user_id, 29);
     }
+
+    if($pid == 5278) {
+      WooThemes_Sensei_Utils::user_start_course($user_id, 44);
+      WooThemes_Sensei_Utils::user_start_course($user_id, 342);
+      WooThemes_Sensei_Utils::user_start_course($user_id, 29);
+    }
   }
 }
 
