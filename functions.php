@@ -226,7 +226,7 @@ function free_piano_lessons() {
     'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
   );
   $rewrite = array(
-    'slug'                  => 'free-lessons',
+    'slug'                  => 'free-piano-videos',
     'with_front'            => true,
     'pages'                 => true,
     'feeds'                 => true,
@@ -246,7 +246,7 @@ function free_piano_lessons() {
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,
     'can_export'            => true,
-    'has_archive'           => 'free-lessons',
+    'has_archive'           => 'free-piano-videos',
     'exclude_from_search'   => true,
     'publicly_queryable'    => true,
     'rewrite'               => $rewrite,

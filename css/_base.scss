@@ -423,8 +423,20 @@ h1.landing-title {
 
 .free-lesson-wrap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .free-lesson {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+
+    .cta {
+      margin: 20px;
+    }
+  }
 }
 
 .pagination-nav {
@@ -460,6 +472,32 @@ h1.landing-title {
         background-color: $primary-color;
         color: #FFFFFF;
       }
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+
+  .page-numbers {
+    padding: 8px 15px;
+    margin: 0px 5px;
+    text-decoration: none;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    @include rounded-corners;
+
+    &.current, &:hover {
+      color: #FFFFFF;
+      background-color: $primary-color;
+    }
+
+    &.dots {
+      border: 0px;
     }
   }
 }

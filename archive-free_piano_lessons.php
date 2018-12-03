@@ -18,7 +18,32 @@ include(TEMPLATEPATH."/header.php");?>
     		if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
     	?>
 			<div class="free-lesson">
-				<?php the_title();?>
+				<h2><?php the_title();?></h2>
+
+				<div class="videoWrapper">
+					<?php the_content();?>
+				</div>
+				<div class="cta" align="center">
+					<h3>To get access to all video lessons, click below to become a monthly paid subscriber</h3>
+					<a class="btn" href="<?php bloginfo('url');?>/checkout/?add-to-cart=74">Add To Cart</a>
+				</div>
+			</div>
+
+		 <?php endwhile; else : ?>
+		 <?php endif; ?>
+
+		 <?php
+		    $args = array( 
+		            'post_type' => 'free_piano_lessons',
+					'posts_per_page' => 4,
+					'offset' => 1
+		            );
+		    $query = new WP_Query( $args );
+
+    		if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
+    	?>
+			<div class="free-lesson">
+				<h2><?php the_title();?></h2>
 
 				<div class="videoWrapper">
 					<?php the_content();?>
@@ -29,6 +54,11 @@ include(TEMPLATEPATH."/header.php");?>
 		 <?php endif; ?>
 	</div>
 
-	<?php pagination_nav(); ?>
+	<?php the_posts_pagination( array(
+		'mid_size'  => 2,
+		'prev_text' => __( '&#xab; Back', 'textdomain' ),
+		'next_text' => __( 'More Lessons &#xbb;', 'textdomain' ),
+		) );
+	?>
 
 <?php get_footer(); ?>  

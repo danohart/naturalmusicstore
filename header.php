@@ -127,7 +127,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
         </div>
         <div class="sec">
           <h2><i class="fa fa-music" aria-hidden="true"></i></h2>
-          <p>You learn by playing along with the video lessons or a downloadable mp3 backing track.</p>
+          <p>You learn by playing along with the video lessons.</p>
         </div>
       </div>
       </div>

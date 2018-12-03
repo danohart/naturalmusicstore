@@ -101,6 +101,24 @@
     }
   }
 
+  .free-lesson-wrap {
+    .free-lesson {
+      width: 90%;
+      margin-bottom: 30px;
+
+      .cta {
+        font-size: 12px;
+        margin: 25px 0px;
+        background: $secondary-color-alt;
+        padding: 20px;
+        
+        .btn {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
   #newsletter {
     padding: 50px 18px;
   }
